@@ -27,7 +27,7 @@ void main()
     while(PORTB.F2);            //Waiting for Echo goes LOW
     T1CON.F0 = 0;               //Timer Stops
 
-    a = (TMR1L | (TMR1H<<8));   //Read Timer Value.
+    a = (TMR1L | (TMR1H<<8));   // Read Timer Value.
                                 // (By shifting the TMR1H value to the left
                                 //  by 8 bits, the bitwise or operation was
                                 //  performed with TMR1L and a 16-bit timer
@@ -42,14 +42,14 @@ void main()
 */
 
 
-    a = (a/58.82)/5;            //Since the meter step interval is 0.2
-                                //  wus, the counter value was converted to
+    a = (a/58.82)/5;            //  Since the meter step interval is 0.2
+                                //  microsecond, the counter value was converted to
                                 //  microseconds by dividing it into 5.
 
-    a = a + 1;                  //Distance Calibration (Rounded up because
+    a = a + 1;                  //  Distance Calibration (Rounded up because
                                 //  a is defined as an integer.)
 
-    if(a>=2 && a<=50)           //Check if the result is between 2cm and
+    if(a>=2 && a<=50)           //  Check if the result is between 2cm and
                                 //  10cm.
     {
        PORTB.F3=1;              // LED Turns On
