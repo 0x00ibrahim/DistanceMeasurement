@@ -1,7 +1,5 @@
 # DistanceMeasurement
 
-servo motor control with PIC16F628A microcontroller and HC-SR04 distance sensor.
-
 ---
 
 In this study, servo motor control has been done by using PIC16F628A microcontroller and HC-SR04 distance sensor. For the microcontroller, microC compiler and PICkit2 programming board used. The circuit diagram has been drawn by using Proteus.
