@@ -27,11 +27,7 @@ void main()
     while(PORTB.F2);            //Waiting for Echo goes LOW
     T1CON.F0 = 0;               //Timer Stops
 
-    a = (TMR1L | (TMR1H<<8));   // Read Timer Value.
-                                // (By shifting the TMR1H value to the left
-                                //  by 8 bits, the bitwise or operation was
-                                //  performed with TMR1L and a 16-bit timer
-                                //  value was obtained.)
+    a = (TMR1L | (TMR1H<<8));   // Read Timer Value.                              
 
 /*
     fosc = 20 MHz
